@@ -79,7 +79,8 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   bootstrap_dns:
-  - 1.1.1.1
+  - 223.6.6.6
+  - 8.8.8.8
   all_servers: true
   allowed_clients: []
   disallowed_clients: []
@@ -90,7 +91,9 @@ dns:
   safebrowsing_enabled: false
   resolveraddress: ""
   upstream_dns:
-  - 1.1.1.1
+  - 211.139.29.150
+  - 223.5.5.5
+  - tcp://8.8.4.4
 tls:
   enabled: false
   server_name: ""
@@ -101,21 +104,13 @@ tls:
   private_key: ""
 filters:
 - enabled: true
-  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-  name: AdGuard Simplified Domain Names filter
+  url: https://anti-ad.net/easylist.txt
+  name: anti-ad
   id: 1
 - enabled: true
-  url: https://adaway.org/hosts.txt
-  name: AdAway
+  url: https://cdn.jsdelivr.net/gh/banbendalao/ADgk@latest/ADgk.txt
+  name: ADGK-AD
   id: 2
-- enabled: true
-  url: https://hosts-file.net/ad_servers.txt
-  name: hpHosts - Ad and Tracking servers only
-  id: 3
-- enabled: true
-  url: https://www.malwaredomainlist.com/hostslist/hosts.txt
-  name: MalwareDomainList.com Hosts List
-  id: 4
 user_rules: []
 dhcp:
   enabled: false
